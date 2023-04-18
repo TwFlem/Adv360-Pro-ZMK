@@ -1,3 +1,5 @@
+#define str(s) #s
+
 #define MOD_MORPH(NAME, KEY, MOD_KEY, MODS) \
   mm_##NAME: mm_##NAME { \
     compatible = "zmk,behavior-mod-morph"; \
