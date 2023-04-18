@@ -1,0 +1,23 @@
+#define MOD_MORPH(NAME, KEY, MOD_KEY, MODS) \
+  mm_##NAME: mm_##NAME { \
+    compatible = "zmk,behavior-mod-morph"; \
+    label = str(NAME); \
+    #binding-cells = <0>; \
+    bindings = <&kp KEY>, <&kp MOD_KEY>; \
+    mods = <MODS>; \
+  };
+
+MOD_MORPH(dllr_hash,  DLLR,  HASH,  (MOD_LSFT|MOD_RSFT))
+MOD_MORPH(n1_plus,    PLUS,  N1,    (MOD_LSFT|MOD_RSFT))
+MOD_MORPH(n2_lbkt,    LBKT,  N2,    (MOD_LSFT|MOD_RSFT))
+MOD_MORPH(n3_lbrc,    LBRC,  N3,    (MOD_LSFT|MOD_RSFT))
+MOD_MORPH(n4_lpar,    LPAR,  N4,    (MOD_LSFT|MOD_RSFT))
+MOD_MORPH(n5_amps,    AMPS,  N5,    (MOD_LSFT|MOD_RSFT))
+MOD_MORPH(n6_equal,   EQUAL, N6,    (MOD_LSFT|MOD_RSFT))
+MOD_MORPH(n7_rpar,    RPAR,  N7,    (MOD_LSFT|MOD_RSFT))
+MOD_MORPH(n8_rbrc,    RBRC,  N8,    (MOD_LSFT|MOD_RSFT))
+MOD_MORPH(n9_rbkt,    RBKT,  N9,    (MOD_LSFT|MOD_RSFT))
+MOD_MORPH(n0_star,    STAR,  N0,    (MOD_LSFT|MOD_RSFT))
+MOD_MORPH(excl_prcnt, EXCL,  PRCNT, (MOD_LSFT|MOD_RSFT))
+
+MOD_MORPH(at_caret,   AT,    CARET, (MOD_LSFT|MOD_RSFT))
