@@ -8,7 +8,7 @@
 #define FN 1
 #define MOD 2
 #define PROG 3
-#define KP 4
+#define KEYP 4
 
 #define MM_F &mm_dllr_hash
 #define MM_1 &mm_n1_plus
@@ -79,7 +79,7 @@ default_layer {
         &kp TAB      &kp Q     &kp W    &kp E    &kp R      &kp T  &none                                                                               &none        &kp Y  &kp U     &kp I      &kp O      &kp P    &kp MINUS
         &kp ESC      &kp A     &kp S    &kp D    &kp F      &kp G              &none  &kp LCTRL  &kp LALT   &none   &none  &kp RIGHT_ALT  &kp RCTRL    &none        &kp H  &kp J     &kp K      &kp L      &kp SEMI &kp SQT
         &kp LSHFT    &kp Z     &kp X    &kp C    &kp V      &kp B        &none     &none     &kp HOME &none &none &kp PG_UP &none     &none                         &kp N  &kp M     &kp COMMA  &kp DOT    &kp FSLH &kp RSHFT
-        &mo FN       &kp GRAVE &kp CAPS &kp LEFT &kp RIGHT               &kp BKSP  &mo KP   &kp LEFT_COMMAND              &kp RIGHT_COMMAND &kp ENTER &kp SPACE         &kp UP    &kp DOWN   &kp BSLH   MM_AC    &mo FN
+        &mo FN       &kp GRAVE &mo KEYP &kp LEFT &kp RIGHT               &kp BKSP  &kp LSHFT   &kp LEFT_COMMAND              &kp RIGHT_COMMAND &kp ENTER &kp SPACE         &kp UP    &kp DOWN   &kp BSLH   MM_AC    &mo FN
         >;
     };
   };
