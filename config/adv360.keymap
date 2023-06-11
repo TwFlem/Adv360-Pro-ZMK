@@ -47,7 +47,7 @@
       bindings = <
         MM_F         MM_1      MM_2     MM_3     MM_4       MM_5   &tog NORM                                                                           &mo MOD      MM_6   MM_7      MM_8       MM_9       MM_0     MM_L 
         &kp TAB      &kp Q     &kp W    &kp E    &kp R      &kp T  &none                                                                               &none        &kp Y  &kp U     &kp I      &kp O      &kp P    &kp MINUS
-        &kp ESC      &kp A     &kp S    &kp D    &kp F      &kp G        &CAPS  &kp LEFT_ALT  &kp HOME   &none   &none  &kp PG_UP  &kp RIGHT_ALT       &CAPS        &kp H  &kp J     &kp K      &kp L      &kp SEMI &kp SQT
+        &kp ESC      &kp A     &kp S    &kp D    &kp F      &kp G        &kp CAPS  &kp LEFT_ALT  &kp HOME   &none   &none  &kp PG_UP  &kp RIGHT_ALT       &kp CAPS        &kp H  &kp J     &kp K      &kp L      &kp SEMI &kp SQT
         &kp LSHFT    &kp Z     &kp X    &kp C    &kp V      &kp B        &none     &none     &kp LEFT_COMMAND &none &none &kp RIGHT_COMMAND &none      &none        &kp N  &kp M     &kp COMMA  &kp DOT    &kp FSLH &kp RSHFT
         &mo FN       &kp GRAVE &mo FN &kp LEFT &kp RIGHT               &kp BKSP  &kp LSHFT   &kp LCTRL              &kp RCTRL &kp ENTER &kp SPACE                          &kp UP    &kp DOWN   &kp BSLH   MM_AC    &mo FN
         >;
