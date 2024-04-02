@@ -23,13 +23,13 @@
 
 #define MM_AC &mm_at_caret
 
-#define FS FSLH
-#define ST STAR
-#define LP KP_LPAR
-#define RP KP_RPAR
+#define KP_FS &kp FSLH
+#define KP_ST &kp STAR
+#define KP_LP &kp KP_LPAR
+#define KP_RP &kp KP_RPAR
+#define KP_MN &kp MINUS
+#define KP_PL &kp PLUS
 
-#define MN MINUS
-#define PL PLUS
 
 / {
     behaviors {
@@ -50,21 +50,21 @@
   keymap {
     compatible = "zmk,keymap";
 
-    # programming {
-    #   bindings = <
-    #     MM_F      MM_1      MM_2     MM_3     MM_4       MM_5   &tog NORM                                                      &mo MOD MM_6   MM_7   MM_8      MM_9     MM_0     MM_L 
-    #     &kp TAB   &kp Q     &kp W    &kp E    &kp R      &kp T  &none                                                          &none   &kp Y  &kp U  &kp I     &kp O    &kp P    &kp MINUS
-    #     &kp ESC   &kp A     &kp S    &kp D    &kp F      &kp G  &kp CAPS     &kp LEFT_ALT &kp HOME &kp PG_UP &kp RIGHT_ALT    &kp CAPS &kp H  &kp J  &kp K     &kp L    &kp SEMI &kp SQT
-    #     &kp LSHFT &kp Z     &kp X    &kp C    &kp V      &kp B                    &kp LEFT_COMMAND &kp RIGHT_COMMAND                   &kp N  &kp M  &kp COMMA &kp DOT  &kp FSLH &kp RSHFT
-    #     &mo FN    &kp GRAVE &mo FN   &kp LEFT &kp RIGHT               &kp BKSP &kp LSHFT &kp LCTRL &kp RCTRL &kp ENTER &kp SPACE              &kp UP  &kp DOWN &kp BSLH MM_AC    &mo FN
-    #   >;
-    # };
+    programming {
+      bindings = <
+        MM_F      MM_1      MM_2     MM_3     MM_4       MM_5   &tog NORM                                                      &mo MOD MM_6   MM_7   MM_8      MM_9     MM_0     MM_L 
+        &kp TAB   &kp Q     &kp W    &kp E    &kp R      &kp T  &none                                                          &none   &kp Y  &kp U  &kp I     &kp O    &kp P    &kp MINUS
+        &kp ESC   &kp A     &kp S    &kp D    &kp F      &kp G  &kp CAPS     &kp LEFT_ALT &kp HOME &kp PG_UP &kp RIGHT_ALT    &kp CAPS &kp H  &kp J  &kp K     &kp L    &kp SEMI &kp SQT
+        &kp LSHFT &kp Z     &kp X    &kp C    &kp V      &kp B                    &kp LEFT_COMMAND &kp RIGHT_COMMAND                   &kp N  &kp M  &kp COMMA &kp DOT  &kp FSLH &kp RSHFT
+        &mo FN    &kp GRAVE &mo FN   &kp LEFT &kp RIGHT               &kp BKSP &kp LSHFT &kp LCTRL &kp RCTRL &kp ENTER &kp SPACE              &kp UP  &kp DOWN &kp BSLH MM_AC    &mo FN
+      >;
+    };
     fn {
       bindings = <
         &kp F1 &kp F2 &kp F3 &kp F4 &kp F5 &kp F6 &tog PROG                                      &mo MOD &kp F7 &kp F8 &kp F9 &kp F10 &kp F11 &kp F12
         &trans &trans &trans &trans &trans &trans  &none                                           &none &trans &kp N1 &kp N2 &kp N3  &kp N4  &trans
-        &trans &trans &trans &kp FS &kp ST &kp LP  &none        &trans &trans &trans &trans        &none &kp RP &kp N5 &kp N6 &kp N7  &kp N8  &trans
-        &trans &trans &trans &kp MN &kp PL &trans                      &trans &trans                     &trans &kp N0 &trans &trans  &kp N9  &trans
+        &trans &trans &trans KP_FS  KP_ST  KP_LP   &none        &trans &trans &trans &trans        &none KP_RP  &kp N5 &kp N6 &kp N7  &kp N8  &trans
+        &trans &trans &trans KP_MN  KP_PL  &trans                      &trans &trans                     &trans &kp N0 &trans &trans  &kp N9  &trans
         &trans &trans &trans &trans &trans               &trans &trans &trans &trans &trans &trans              &trans &trans &trans  &trans  &trans
       >;
     };
