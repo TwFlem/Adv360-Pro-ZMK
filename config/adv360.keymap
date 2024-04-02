@@ -4,18 +4,30 @@
 #include <dt-bindings/zmk/rgb.h>
 #include <dt-bindings/zmk/backlight.h>
 
+#define PROG 0
+#define NORM 1
+#define FN 2
+#define MOD 3
+
+#define MM_F &mm_dllr_hash
+#define MM_1 &mm_n1_plus
+#define MM_2 &mm_n2_lbkt
+#define MM_3 &mm_n3_lbrc
+#define MM_4 &mm_n4_lpar
+#define MM_5 &mm_n5_amps
+#define MM_6 &mm_n6_equal
+#define MM_7 &mm_n7_rpar
+#define MM_8 &mm_n8_rbrc
+#define MM_9 &mm_n9_rbkt
+#define MM_0 &mm_n0_star
+#define MM_L &mm_excl_prcnt
+
+#define MM_AC &mm_at_caret
+
 / {
     behaviors {
       #include "macros.dtsi"
-      #include "version.dtsi"
-      #ifndef VERSION_MACRO
-      macro_ver: macro_ver {
-        compatible = "zmk,behavior-macro";
-        label = "macro_version";
-        #binding-cells = <0>;
-        bindings = <&kp RET>;
-      };
-      #endif
+      #include "behaviors.dtsi"
 
       hm: homerow_mods {
           compatible = "zmk,behavior-hold-tap";
@@ -31,13 +43,13 @@
   keymap {
     compatible = "zmk,keymap";
 
-    default_layer {
+    programming {
       bindings = <
-        &kp EQUAL &kp N1    &kp N2   &kp N3   &kp N4     &kp N5 &tog 1                                                           &mo 3 &kp N6 &kp N7 &kp N8    &kp N9   &kp N0   &kp MINUS
-        &kp TAB   &kp Q     &kp W    &kp E    &kp R      &kp T  &none                                                            &none &kp Y  &kp U  &kp I     &kp O    &kp P    &kp BSLH
-        &kp ESC   &kp A     &kp S    &kp D    &kp F      &kp G  &none           &kp LCTRL &kp LALT &kp LGUI  &kp RCTRL           &none &kp H  &kp J  &kp K     &kp L    &kp SEMI &kp SQT
-        &kp LSHFT &kp Z     &kp X    &kp C    &kp V      &kp B                            &kp HOME &kp PG_UP                           &kp N  &kp M  &kp COMMA &kp DOT  &kp FSLH &kp RSHFT
-        &mo 2     &kp GRAVE &kp CAPS &kp LEFT &kp RIGHT                &kp BSPC &kp DEL   &kp END  &kp PG_DN &kp ENTER &kp SPACE              &kp UP &kp DOWN  &kp LBKT &kp RBKT &mo 2
+        MM_F      MM_1      MM_2     MM_3     MM_4       MM_5   &tog NORM                                                      &mo MOD MM_6   MM_7   MM_8      MM_9     MM_0     MM_L 
+        &kp TAB   &kp Q     &kp W    &kp E    &kp R      &kp T  &none                                                            &none &kp Y  &kp U  &kp I     &kp O    &kp P    &kp MINUS
+        &kp ESC   &kp A     &kp S    &kp D    &kp F      &kp G  &kp CAPS     &kp LEFT_ALT &kp HOME &kp PG_UP &kp RIGHT_ALT    &kp CAPS &kp H  &kp J  &kp K     &kp L    &kp SEMI &kp SQT
+        &kp LSHFT &kp Z     &kp X    &kp C    &kp V      &kp B                    &kp LEFT_COMMAND &kp RIGHT_COMMAND                   &kp N  &kp M  &kp COMMA &kp DOT  &kp FSLH &kp RSHFT
+        &mo FN    &kp GRAVE &mo FN   &kp LEFT &kp RIGHT               &kp BKSP &kp LSHFT &kp LCTRL &kp RCTRL &kp ENTER &kp SPACE              &kp UP  &kp DOWN &kp BSLH MM_AC    &mo FN
       >;
     };
     keypad {
